@@ -3,7 +3,9 @@ layout: default
 order: 1
 ---
 
-# Rapports et présentations
-
-- [Rapport global](http://127.0.0.1:4000/lab-codage/packages/) 
-- [Présentation global](http://127.0.0.1:4000/lab-codage/packages/presentation.html) 
+{% assign pages = site.pages | sort: "order" %}
+{% for page in pages %}
+ {% if page.chapitre or page.package %}
+    {{- page.content | markdownify -}}
+  {% endif %}
+{% endfor %}
