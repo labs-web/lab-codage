@@ -1,3 +1,9 @@
+---
+layout: default
+chapitre: Packages
+order: 2
+---
+
 # Packages
 
 ## Nommage standard des packages 
